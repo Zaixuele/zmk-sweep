@@ -157,6 +157,21 @@
             bindings = <&kp DQT>;
             key-positions = <17 18 26>;
         };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9>;
+        };
+
+        delete {
+            bindings = <&kp DEL>;
+            key-positions = <18 19>;
+        };
+
+        dot {
+            bindings = <&kp DOT>;
+            key-positions = <28 29>;
+        };
     };
 
     behaviors {
@@ -182,10 +197,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W  &kp E           &kp R            &kp T    &kp Y  &kp U            &kp I            &kp O        &kp P
-&kp A             &kp S  &kp D           &kp F            &kp G    &kp H  &ht RIGHT_ALT J  &ht RIGHT_GUI K  &ht RCTRL L  &kp BSPC
-&ht LEFT_SHIFT Z  &kp X  &ht LEFT_ALT C  &kp V            &kp B    &kp N  &kp M            &kp COMMA        &kp FSLH     &ht RIGHT_SHIFT ENTER
-                                         &ht LCTRL SPACE  &mo 1    &mo 1  &mo 2
+&kp Q  &kp W  &kp E  &kp R  &kp T        &kp Y  &kp U  &kp I      &kp O     &kp P
+&kp A  &kp S  &kp D  &kp F  &kp G        &kp H  &kp J  &kp K      &kp L     &kp ENTER
+&kp Z  &kp X  &kp C  &kp V  &kp B        &kp N  &kp M  &kp COMMA  &kp FSLH  &kp LEFT_SHIFT
+                     &mo 1  &kp SPACE    &mo 4  &mo 2
             >;
         };
 
@@ -193,10 +208,10 @@
 
         sym_layer {
             bindings = <
-&kp N1     &kp N2  &kp N3         &kp N4     &kp N5     &kp N6    &kp N7     &kp N8     &kp N9    &kp N0
-&kp A      &kp S   &kp LC(SPACE)  &kp F      &kp G      &kp SEMI  &kp MINUS  &kp EQUAL  &kp SQT   &kp BSPC
-&kp LSHFT  &kp X   &kp ESC        &kp DEL    &kp TAB    &kp BSLH  &kp LBKT   &kp DOT    &kp RBKT  &kp RET
-                                  &kp SPACE  &trans     &trans    &trans
+&kp N1            &kp N2              &kp N3         &kp N4            &kp N5      &kp N6           &kp N7         &kp N8     &kp N9     &kp N0
+&kp LEFT_BRACKET  &kp RIGHT_BRACKET   &kp SEMICOLON  &kp SINGLE_QUOTE  &kp TAB     &kp KP_MULTIPLY  &kp KP_DIVIDE  &kp MINUS  &kp EQUAL  &kp BACKSLASH
+&kp LSHFT         &kp LA(LEFT_SHIFT)  &kp LC(SPACE)  &kp LA(SPACE)     &kp LWIN    &kp COMMA        &kp DOT        &kp SLASH  &kp RBKT   &kp RET
+                                                     &none             &trans      &trans           &trans
             >;
         };
 
@@ -224,12 +239,12 @@
 
         // Low frequency symbols.
 
-        symbols_2_layer {
+        ctrl_layer {
             bindings = <
-&kp IT_CARET  &kp IT_UNDER  &kp IT_PND   &kp IT_EUR   &kp IT_HASH    &none  &none  &none  &none  &none
-&kp IT_BKTK   &kp IT_TILDE  &kp IT_BSLH  &kp IT_PIPE  &kp IT_AND     &none  &none  &none  &none  &none
-&none         &none         &kp IT_SECT  &kp IT_CCED  &kp IT_DEG     &none  &none  &none  &none  &none
-                                         &none        &none          &none  &none
+&kp ESC    &kp LA(TAB)  &kp IT_PND   &kp IT_EUR   &kp IT_HASH      &kp PAGE_UP    &kp HOME  &kp UP    &kp END    &kp BACKSPACE
+&kp LC(A)  &kp LC(S)    &kp IT_BSLH  &kp IT_PIPE  &kp IT_AND       &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL
+&kp LC(Z)  &kp LC(X)    &kp LC(C)    &kp LC(V)    &kp LA(SPACE)    &none          &none     &none     &none      &none
+                                     &none        &none            &none          &none
             >;
         };
 
